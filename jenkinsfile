@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage ('cloning stage') {
+            steps {
+                git'https://github.com/ahmedchelsea/hello-world.git'
+            }
+        }
+    }
+}
