@@ -5,12 +5,12 @@ sudo useradd jenkins
 
 
 # patching server first
-yum install update -y
+apt install update -y
 
-yum upgrade -y
+apt upgrade -y
 
 # install docker
-yum install docker -y
+apt install docker -y
 
 # add jenkins user to docker group
 usermod -aG docker jenkins 
