@@ -20,7 +20,7 @@ usermod -aG docker jenkins
 # add user jenkins to sudoers group and run all commands without asking for passwd
 echo "jenkins  ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# switch to user jenkins ih the system
+# switch to user jenkins in the system
 su -jenkins
 
 
