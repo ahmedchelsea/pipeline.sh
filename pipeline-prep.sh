@@ -10,7 +10,7 @@ apt install update -y
 apt upgrade -y
 
 # install docker
-apt install docker -y
+apt install docker.io -y
 
 # add jenkins user to docker group
 usermod -aG docker jenkins 
