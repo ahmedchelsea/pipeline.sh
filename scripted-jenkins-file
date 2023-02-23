@@ -23,20 +23,22 @@ node {
         sh "docker image list"
     }
     stage("Docker Image Tag"){
-
-        sh "docker tag ahmed-httpd ahmedchelsea/ahmed-httpd:ahmed-httpd"
+    
+    sh "docker tag ahmed-httpd ahmedchelsea/ahmed-httpd:ahmed-httpd"
     }
+    
     stage("Docker Login to Hub Docker"){
      withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]){
-        sh 'docker login -u josh1991 -p $PASSWORD'
+        sh 'docker login -u ahmedchelsea -p $PASSWORD'
      }
      
     }
      
     stage("Docker Image Push"){
         
-        sh "docker push josh1991/king-httpd:king-httpd"
+        sh "docker push ahmedchelsea/ahmed-httpd:ahmed-httpd"
     }
 }
+
 
 #scripted pipeline code
